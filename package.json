@@ -1,15 +1,16 @@
 {
-  "name": "prettier",
-  "version": "1.16.0-dev",
+  "name": "@pugnascotia/prettier",
+  "version": "1.16.1-dev",
   "description": "Prettier is an opinionated code formatter",
   "bin": {
     "prettier": "./bin/prettier.js"
   },
-  "repository": "prettier/prettier",
+  "repository": "https://github.com/pugnascotia/prettier",
   "homepage": "https://prettier.io",
   "author": "James Long",
   "license": "MIT",
   "main": "./index.js",
+  "types": "./index.d.ts",
   "engines": {
     "node": ">=6"
   },
