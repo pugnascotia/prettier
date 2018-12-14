@@ -1,6 +1,6 @@
 {
   "name": "@pugnascotia/prettier",
-  "version": "1.16.1-dev",
+  "version": "1.16.2-dev",
   "description": "Prettier is an opinionated code formatter",
   "bin": {
     "prettier": "./bin/prettier.js"
