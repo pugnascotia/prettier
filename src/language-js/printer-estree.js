@@ -2066,7 +2066,7 @@ function printPathNoParens(path, options, print, args) {
             const printed = concat(["...", print(p)]);
             const n = p.getValue();
             if (!n.comments || !n.comments.length) {
-              return printed;
+              return options.jsxBracketSpacing ? concat([" ", printed, " "]) : printed;
             }
             return concat([
               indent(
@@ -2117,7 +2117,12 @@ function printPathNoParens(path, options, print, args) {
       return group(
         concat([
           "{",
-          indent(concat([options.jsxBracketSpacing ? line : softline, path.call(print, "expression")])),
+          indent(
+            concat([
+              options.jsxBracketSpacing ? line : softline,
+              path.call(print, "expression")
+            ])
+          ),
           options.jsxBracketSpacing ? line : softline,
           lineSuffixBoundary,
           "}"
